@@ -5,3 +5,33 @@
 body {
   @apply font-sans bg-gray-100;
 }
+.revenue{
+  @apply m-5 p-6 border border-gray-300 bg-white rounded-lg shadow-lg
+}
+.revenue-header {
+  @apply text-2xl mb-4 font-bold
+}
+.button{
+  @apply mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600
+}
+.booking{
+  @apply flex flex-col w-full max-w-md m-5 p-6 border border-gray-300 bg-white rounded-lg shadow-lg
+}
+.booking-header {
+  @apply text-2xl mb-4 font-semibold
+}
+.input {
+  @apply p-2 border border-gray-300 rounded
+}
+.deskClass {
+  @apply w-24 h-24 sm:w-28 sm:h-28 m-2 flex items-center justify-center cursor-pointer rounded-lg
+}
+.booked {
+  @apply bg-red-500 text-white
+}
+.not-booked {
+  @apply bg-green-500 text-white hover:bg-green-600
+}
+.cursor-disabled {
+  @apply cursor-not-allowed
+}

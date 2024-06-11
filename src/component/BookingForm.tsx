@@ -17,8 +17,8 @@ const BookingForm: React.FC<BookingFormProps> = ({ deskId, deskType, onSubmit })
   };
 
   return (
-    <div className="flex flex-col w-full max-w-md m-5 p-6 border border-gray-300 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl mb-4 font-semibold">Booking Desk {deskId}</h2>
+    <div className="booking">
+      <h2 className="booking-header">Booking Desk {deskId}</h2>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <label className="flex flex-col">
           <span className="mb-1">Hours:</span>
@@ -27,7 +27,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ deskId, deskType, onSubmit })
             value={hours}
             onChange={(e) => setHours(Number(e.target.value))}
             min="1"
-            className="p-2 border border-gray-300 rounded"
+            className="input"
           />
         </label>
         {deskType === 'individual' && (
@@ -36,7 +36,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ deskId, deskType, onSubmit })
             <select
               value={membership}
               onChange={(e) => setMembership(e.target.value as 'Basic' | 'Premium' | 'Executive')}
-              className="p-2 border border-gray-300 rounded"
+              className="input"
             >
               <option value="Basic">Basic</option>
               <option value="Premium">Premium</option>
@@ -44,7 +44,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ deskId, deskType, onSubmit })
             </select>
           </label>
         )}
-        <button type="submit" className="mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        <button type="submit" className="button">
           Book Now
         </button>
       </form>
